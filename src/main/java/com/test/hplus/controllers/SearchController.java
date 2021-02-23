@@ -22,10 +22,7 @@ public class SearchController {
 		System.out.println("Insearch Controller");
 		
 		List<Product> products = productRepository.searchByName(search);
-		if(products!=null)
-		{
-			System.out.println(products.toString());
-		}
+		
 		model.addAttribute("products",products);
 		
 		return "search";
