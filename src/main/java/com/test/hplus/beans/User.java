@@ -1,20 +1,35 @@
 package com.test.hplus.beans;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.validation.constraints.*;
+
+import java.util.Date;
+
+import javax.persistence.*;
 
 @Entity
 public class User {
 
 	@Id
 	private int id;
+	
+	@Size(min=6, message = "{username.cannot.be.less.than.six.characters}")
 	private String username;
+	
+    @Pattern(regexp = "((?=.*[A-Z]).{6,10})", message = "Password must have one upper case, one lower case and should be between 6 and 10 characters")
 	private String password;
-	private String gender;
+    
+  //@Enumerated used to store value in a particular format instead of cardinals like 0,1,2,3
+  	@Enumerated(EnumType.STRING)
+	private Gender gender;
+	
+	@NotNull(message="Activity cannot be left empty.")
 	private String activity;
+	
+	@NotEmpty(message = "First cannot be null")
 	private String firstName;
 	private String lastName;
-	private String dateOfBirth;
+	private Date dateOfBirth;
 
 	public int getId() {
 		return id;
@@ -41,11 +56,12 @@ public class User {
 		this.password = password;
 	}
 
-	public String getGender() {
+	
+	public Gender getGender() {
 		return gender;
 	}
 
-	public void setGender(String gender) {
+	public void setGender(Gender gender) {
 		this.gender = gender;
 	}
 
@@ -73,11 +89,11 @@ public class User {
 		this.lastName = lastName;
 	}
 
-	public String getDateOfBirth() {
+	public Date getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-	public void setDateOfBirth(String dateOfBirth) {
+	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 

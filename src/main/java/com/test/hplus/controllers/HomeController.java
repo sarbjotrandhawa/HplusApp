@@ -6,8 +6,9 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-
 import com.test.hplus.beans.User;
+
+
 
 @Controller
 public class HomeController {
@@ -42,10 +43,9 @@ public class HomeController {
 	public User getDefaultUser() {
 		return new User();
 	}
-	
+
 	@ModelAttribute("genderItems")
-	public List<String> getGenderItems()
-	{
-		return Arrays.asList(new String[] {"Male","Female","Others"});
+	public List<String> getGenderItems() {
+		return Arrays.asList(new String[] { "Male", "Female", "Other" });
 	}
 }
