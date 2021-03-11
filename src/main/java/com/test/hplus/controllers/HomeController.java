@@ -37,15 +37,5 @@ public class HomeController {
 		return "register";
 	}
 
-	// This method return default values to model attribute in Registration
-	// Controller when user not entered anything
-	@ModelAttribute("newuser")
-	public User getDefaultUser() {
-		return new User();
-	}
-
-	@ModelAttribute("genderItems")
-	public List<String> getGenderItems() {
-		return Arrays.asList(new String[] { "Male", "Female", "Other" });
-	}
+	
 }
