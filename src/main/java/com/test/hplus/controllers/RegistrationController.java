@@ -26,13 +26,15 @@ public class RegistrationController {
 	@InitBinder
 	public void initBinder(WebDataBinder binder)
 	{
-		//true I used a it can take empty values as well
+		//true I used, as it can take empty values as well
 		binder.registerCustomEditor(Date.class, "dateOfBirth", new CustomDateEditor(new SimpleDateFormat("YYYY-MM-dd"),true));
 	}
 	
 	/* @Valid is used for checking the errors from the annotations defined in model components.
 	 * If there is any error then we same to send the response back with a particular message.
-	 * BindingResult helps us to send back error messages to client and map all the error messages to a client side in a form.*/
+	 * BindingResult helps us to send back error messages to client and map all the error messages
+	 *  to a client side in a form.*/
+	
 	@PostMapping("/registerUser")
 	public String  registerUser(@Valid @ModelAttribute("newuser")User user,BindingResult result, Model model)
 	{

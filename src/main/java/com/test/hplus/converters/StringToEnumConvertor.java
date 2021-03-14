@@ -1,9 +1,6 @@
 package com.test.hplus.converters;
 
-
-
 //This class change the String value from the HTML page or client side to a Gender object
-
 
 import com.test.hplus.beans.Gender;
 import org.springframework.core.convert.converter.Converter;
