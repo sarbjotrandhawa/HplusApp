@@ -1,4 +1,4 @@
-Completed a String MVC application named as a HPlussApp helps to find products in the company Inventory. User can create register, login and find the products as their desires. 
+Completed a String MVC application named as a HPlussApp helps to find products in the company Inventory. User can create register, login and check the availabity of products. 
 
 FrontEnd: JSP, CSS
 Backend: Java, SpringBoot, Spring MVC, JPA, Hibernate
