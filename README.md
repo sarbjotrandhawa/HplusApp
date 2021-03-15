@@ -1,11 +1,11 @@
 Completed a String MVC application named as a HPlussApp helps to find products in the company Inventory. User can create register, login and check the availabity of products. 
 
-FrontEnd: JSP, CSS
-Backend: Java, SpringBoot, Spring MVC, JPA, Hibernate
-Data Transerfer: XML, JSON
-DataBase: Mysql
-Version control: Git
-Building tool: Maven
+FrontEnd: JSP, CSS, Spring Form Tags.
+Backend: Java, SpringBoot, Spring MVC, JPA, Hibernate.
+Data Transerfer: XML, JSON.
+DataBase: Mysql.
+Version control: Git.
+Building tool: Maven.
 Tools: SpringToolSuit, Mysql-Workbench, Postman for testing Restcontroller.
 
 Technical Aspects covered:
